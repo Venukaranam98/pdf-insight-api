@@ -56,6 +56,18 @@ Return Response
 
 ---
 
+## Live Deployment
+
+| Service      | URL                                         |
+| ------------ | ------------------------------------------- |
+| API Base URL | https://pdf-insight-api-1.onrender.com      |
+| Swagger Docs | https://pdf-insight-api-1.onrender.com/docs |
+| Health Check | https://pdf-insight-api-1.onrender.com/     |
+
+You can test the API directly using the Swagger UI without installing the project locally.
+
+---
+
 ## API Endpoints
 
 | Method | Endpoint      | Description             |
@@ -88,7 +100,8 @@ pdf-insight-api/
 ├── .env
 ├── .gitignore
 ├── README.md
-└── requirements.txt
+├── requirements.txt
+└── runtime.txt
 ```
 
 ### Notes
@@ -96,7 +109,11 @@ pdf-insight-api/
 * `uploads/` stores PDFs temporarily during processing.
 * `chroma_db/` stores vector embeddings generated from uploaded PDFs.
 * `.env` contains environment variables such as `GROQ_API_KEY`.
+* `runtime.txt` specifies the Python version used during deployment on Render.
 * `uploads/`, `chroma_db/`, and `.env` are excluded from Git using `.gitignore`.
+
+```
+
 
 ---
 

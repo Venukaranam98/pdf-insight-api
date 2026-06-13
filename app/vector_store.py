@@ -1,7 +1,9 @@
 from langchain_chroma import Chroma
-from .embeddings import embedding
+from .embeddings import get_embedding
 
 def create_vector_store(chunks):
+    embedding = get_embedding()
+
     return Chroma.from_documents(
         documents=chunks,
         embedding=embedding,
